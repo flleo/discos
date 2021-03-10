@@ -3,11 +3,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>es.cifpcm</groupId>
-    <artifactId>DiscosJsfLleoF</artifactId>
+    <artifactId>Discos_jsf</artifactId>
     <version>1</version>
     <packaging>war</packaging>
 
-    <name>DiscosJsfLleoF</name>
+    <name>Discos_jsf</name>
 
     <properties>
         <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>

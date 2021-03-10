@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://xmlns.jcp.org/jsf/core" 
+      xmlns:h="http://java.sun.com/jsf/html">    
+    <head>
+        <title>Discos</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+        <h2>Listado de Discos</h2>
+        <h:link outcome="/discos/nuevo" value="Crear disco"/>
+        <h:form>
+            <h:dataTable value = "#{discoBean.getDiscoList()}" var = "disco" border="1" style="margin-top: 25px"
+                         styleClass = "discoTable"
+                         headerClass = "discoTableHeader"
+                         rowClasses = "discoTableOddRow,discoTableEvenRow">
+
+                <h:column>    				
+                    <f:facet name = "header">Ref</f:facet>    				
+                        #{disco.idDisco}
+                </h:column>
+
+                <h:column>
+                    <f:facet name = "header">Título</f:facet>
+                        #{disco.titulo}
+                </h:column>
+
+                <h:column>
+                    <f:facet name = "header">Año</f:facet>
+                        #{disco.agno}
+                </h:column>
+
+                <h:column>
+                    <f:facet name = "header">Interprete</f:facet>
+                        #{disco.interprete.interprete}
+                </h:column>
+            </h:dataTable>
+        </h:form>
+
+    </body>
+</html>

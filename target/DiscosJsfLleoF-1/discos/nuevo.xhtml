@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://xmlns.jcp.org/jsf/core" 
+      xmlns:h="http://java.sun.com/jsf/html">     
+    <h:head>
+        <title>Nuevo Disco</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h:panelGrid id="newDisco" columns="2" border="1">
+                <f:facet name="header">
+                    <h:outputText value="Nuevo Disco"/>
+                </f:facet>
+                <h:outputLabel for="txttitulo" value="Titulo"/>
+                <h:inputText id="txttitulo" value="${discoBean.titulo}"/>
+                <h:outputLabel for="txtagno" value="Año"/>
+                <h:inputText id="txtagno" value="${discoBean.agno}"/>
+                <h:outputLabel for="txtinterprete" value="Interprete"/>
+                <h:inputText id="txtinterprete" value="${discoBean.idInterprete}"/>         	
+
+                <h:commandButton value="Insertar" action="#{discoBean.save()}"/>
+            </h:panelGrid>
+        </h:form>
+    </h:body>
+</html>
